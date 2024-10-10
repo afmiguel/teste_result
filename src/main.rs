@@ -1,15 +1,17 @@
 use std::io;
 
 fn main() {
-    println!("Por favor, digite um número:");
+    println!("Please enter a number:");
 
-    let mut entrada_usuario = String::new();
+    let mut user_input = String::new();
     io::stdin()
-        .read_line(&mut entrada_usuario)
-        .unwrap();  // Pode causar uma panique se a leitura da linha falhar
+        .read_line(&mut user_input)
+        .unwrap();  // Can cause a panic if reading the line fails
 
-    let numero: i32 = entrada_usuario.trim().parse()
-        .unwrap();  // Pode causar uma panique se a entrada não puder ser convertida para i32
+    let number: i32 = user_input.trim().parse()
+        .unwrap();  // Can cause a panic if the input cannot be converted to i32
 
-    println!("Você digitou o número: {}", numero);
+    println!("You entered the number: {}", number);
 }
+
+
